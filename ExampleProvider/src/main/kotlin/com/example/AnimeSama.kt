@@ -69,7 +69,7 @@ class AnimeSama : MainAPI() {
         subtitleCallback: (SubtitleFile) -> Unit,
         callback: (ExtractorLink) -> Unit
     ): Boolean {
-        // 'data' contient l'URL de l'épisode récupérée dans 'load'
+        // 'data' contient l'URL de l'épisode récupérée dans 'load'???
         val response = app.get(data).text
         val document = Jsoup.parse(response)
 
