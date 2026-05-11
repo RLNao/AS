@@ -12,9 +12,10 @@ class ExamplePlugin: Plugin() {
     override fun load(context: Context) {
         activity = context as? AppCompatActivity
 
-        // All providers should be added in this manner
-        registerMainAPI(ExampleProvider())
+        // C'est ici qu'on enregistre ton provider Anime-Sama pour qu'il apparaisse dans l'app
+        registerMainAPI(AnimeSama())
 
+        // On garde cette partie pour la gestion des paramètres (BlankFragment)
         openSettings = {
             val frag = BlankFragment(this)
             activity?.let {
